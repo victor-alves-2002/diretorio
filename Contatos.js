@@ -21,7 +21,7 @@ let contacts = [{
         
     contacts.push (newcontact);
     contacts.forEach ((contact, index) => {
-        console.log(`$index + 1}. name: ${contact.name}, phone: ${contact.phone} emmail: ${contact.email}`);
+        console.log(`${index + 1}. name: ${contact.name}, phone: ${contact.phone} emmail: ${contact.email}`);
     }) 
 
     
