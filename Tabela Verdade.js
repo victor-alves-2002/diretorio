@@ -1,33 +1,40 @@
-//TABELA VERDADE
-console.log('TABELA VERDADE:\n');
+// TABELA VERDADE - Em JavaScript
 
-// NEGATIVO (~)
-console.log('\nnegativo, ~:');
-console.log(!true); // -> false
-console.log(!false); // -> true
+console.log('=== TABELA VERDADE ===\n');
 
-console.log('\ne , (^):');
-// e (^)
-console.log(true && true); // -> true
-console.log(true && false); // -> false
-console.log(false && true); // -> false
-console.log(false && false); // -> false
+// Operador de Negação (~)
+console.log('NEGACAO (~ , !)');
+console.log(`!true  => ${!true}`);  // Esperado: false
+console.log(`!false => ${!false}`); // Esperado: true
 
-console.log('\nou , (v):',);
-// ou (v)
-console.log(true || true); // -> true
-console.log(true || false); // -> true
-console.log(false || true); // -> true
-console.log(false || false); // -> false 
+console.log('\nCONJUNÇÃO (E , ^ , &&)');
+// Operador de Conjunção (AND , ^ , &&)
+console.log(`true  && true  => ${true && true}`);   // Esperado: true
+console.log(`true  && false => ${true && false}`);  // Esperado: false
+console.log(`false && true  => ${false && true}`);  // Esperado: false
+console.log(`false && false => ${false && false}`); // Esperado: false
 
-console.log('\nconectando uma formula, criando uma formula maior usando o ||\n');
+console.log('\nDISJUNÇÃO (OU , v , ||)');
+// Operador de Disjunção (OR , v , ||)
+console.log(`true  || true  => ${true || true}`);   // Esperado: true
+console.log(`true  || false => ${true || false}`);  // Esperado: true
+console.log(`false || true  => ${false || true}`);  // Esperado: true
+console.log(`false || false => ${false || false}`); // Esperado: false
+
+console.log('\nCriando uma fórmula lógica maior combinando operadores:');
 const a = false;
 const b = true;
 const c = false;
 const d = true;
-console.log(a && b && c || d); // -> true
-console.log(a && b && (c || d)); // -> false
-// "||" conectar tantos desses operadores
 
-console.log(`\nA prioridade mais alta é a negação !, então conjunção &&, a alternativa ||`);
-// formula negação "~ , (!)", conjunção && "e , (^)", e a ||.
+// Testando expressões compostas
+console.log(`a && b && c || d => ${a && b && c || d}`); 
+// Interpretação: ((a && b && c) || d) => false || true => true
+
+console.log(`a && b && (c || d) => ${a && b && (c || d)}`);
+// Interpretação: (a && b && (c || d)) => (false && (false || true)) => false
+
+console.log('\nOBS: Prioridade dos operadores:');
+console.log('1°: Negação (!)');
+console.log('2°: Conjunção (&&)');
+console.log('3°: Disjunção (||)');
